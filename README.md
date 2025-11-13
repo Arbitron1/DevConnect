@@ -5,71 +5,46 @@ Built with MongoDB, Express, React, Node.js, and TypeScript, DevConnect focuses 
 
 🚀 Tech Stack
 Frontend
-
 React + TypeScript
-
 Redux Toolkit
-
 TailwindCSS
-
 Axios
-
 React Router
 
 Backend
-
 Node.js
-
 Express
-
 TypeScript
-
 MongoDB + Mongoose
-
 JWT Authentication
-
 Bcrypt
-
-Cloudinary (optional: for image uploads)
+Cloudinary (optional for images)
 
 ✨ Features
+
 🔐 Authentication
-
 User registration & login
-
-JWT-based auth
-
+JWT-based authentication
 Secure password hashing
 
 👤 User Profiles
-
-View profile
-
-Edit bio, avatar, location
-
+View user profile
+Edit bio, avatar, and location
 View user-specific posts
 
 📝 Posts System
-
 Create posts
-
 Like / Unlike
-
-Comment (if implemented)
-
+(Optional) Comments
 Explore global feed
 
-🤝 Social Features (Planned)
-
+🤝 Upcoming Features
 Follow / Unfollow
-
 Suggested users
-
-Messaging (Socket.io)
-
+Messaging with Socket.io
 Notifications
+Image uploads
 
-📁 Project Structure
 Backend
 server/
 │── src/
@@ -78,7 +53,7 @@ server/
 │   ├── models/
 │   ├── middleware/
 │   ├── utils/
-│   ├── index.ts
+│   └── index.ts
 │── package.json
 
 Frontend
@@ -87,7 +62,7 @@ client/
 │   ├── components/
 │   ├── pages/
 │   ├── redux/
-│   ├── utils/
+│   └── utils/
 │── package.json
 
 🛠️ Installation & Setup
@@ -113,35 +88,29 @@ cd client
 npm install
 npm run dev
 
-Client .env
+Frontend .env:
 VITE_API_URL=http://localhost:5000/api
 
 🧭 API Overview
-Method	Endpoint	Description
-POST	/api/auth/register	Register user
-POST	/api/auth/login	Login user
-GET	/api/users/:id	Get user profile
-POST	/api/posts/	Create post
-GET	/api/posts/	Get all posts
+| Method | Endpoint             | Description      |
+| ------ | -------------------- | ---------------- |
+| POST   | `/api/auth/register` | Register user    |
+| POST   | `/api/auth/login`    | Login user       |
+| GET    | `/api/users/:id`     | Get user profile |
+| POST   | `/api/posts/`        | Create post      |
+| GET    | `/api/posts/`        | Get all posts    |
+
 🧩 Roadmap
-
 Follow/Unfollow system
-
 Image uploads
-
 Comments & Replies
-
 Real-time chat (Socket.io)
-
 Notifications
-
 Deployment (Render + Vercel)
 
 🤝 Contributing
-
 Pull requests are welcome!
-For major changes, open an issue first to discuss what you'd like to change.
+For major changes, please open an issue first to discuss what you’d like to change.
 
 📄 License
-
 MIT License © 2025 DevConnect
