@@ -3,6 +3,7 @@
 DevConnect is a full-stack social networking platform where users can create accounts, share posts, follow other developers, and build their professional network.  
 Built with **MongoDB, Express, React, Node.js, and TypeScript**, DevConnect focuses on scalable architecture and a clean developer experience.
 
+<<<<<<< HEAD
 ---
 
 ## 🚀 **Tech Stack**
@@ -56,6 +57,51 @@ Built with **MongoDB, Express, React, Node.js, and TypeScript**, DevConnect focu
 
 ### **Backend**
 ```
+=======
+🚀 Tech Stack
+Frontend
+React + TypeScript
+Redux Toolkit
+TailwindCSS
+Axios
+React Router
+
+Backend
+Node.js
+Express
+TypeScript
+MongoDB + Mongoose
+JWT Authentication
+Bcrypt
+Cloudinary (optional for images)
+
+✨ Features
+
+🔐 Authentication
+User registration & login
+JWT-based authentication
+Secure password hashing
+
+👤 User Profiles
+View user profile
+Edit bio, avatar, and location
+View user-specific posts
+
+📝 Posts System
+Create posts
+Like / Unlike
+(Optional) Comments
+Explore global feed
+
+🤝 Upcoming Features
+Follow / Unfollow
+Suggested users
+Messaging with Socket.io
+Notifications
+Image uploads
+
+Backend
+>>>>>>> dead48b24eab01890f24f3c01e872c94aa593872
 server/
 │── src/
 │   ├── controllers/
@@ -117,11 +163,16 @@ npm install
 npm run dev
 ```
 
+<<<<<<< HEAD
 Frontend `.env`:
 ```
+=======
+Frontend .env:
+>>>>>>> dead48b24eab01890f24f3c01e872c94aa593872
 VITE_API_URL=http://localhost:5000/api
 ```
 
+<<<<<<< HEAD
 ---
 
 ## 🧭 **API Overview**
@@ -153,4 +204,28 @@ For major changes, please open an issue first to discuss what you’d like to ch
 ---
 
 ## 📄 **License**
+=======
+🧭 API Overview
+| Method | Endpoint             | Description      |
+| ------ | -------------------- | ---------------- |
+| POST   | `/api/auth/register` | Register user    |
+| POST   | `/api/auth/login`    | Login user       |
+| GET    | `/api/users/:id`     | Get user profile |
+| POST   | `/api/posts/`        | Create post      |
+| GET    | `/api/posts/`        | Get all posts    |
+
+🧩 Roadmap
+Follow/Unfollow system
+Image uploads
+Comments & Replies
+Real-time chat (Socket.io)
+Notifications
+Deployment (Render + Vercel)
+
+🤝 Contributing
+Pull requests are welcome!
+For major changes, please open an issue first to discuss what you’d like to change.
+
+📄 License
+>>>>>>> dead48b24eab01890f24f3c01e872c94aa593872
 MIT License © 2025 DevConnect
