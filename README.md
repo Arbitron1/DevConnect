@@ -3,7 +3,7 @@
 DevConnect is a full-stack social networking platform where users can create accounts, share posts, follow other developers, and build their professional network.  
 Built with **MongoDB, Express, React, Node.js, and TypeScript**, DevConnect focuses on scalable architecture and a clean developer experience.
 
-<<<<<<< HEAD
+
 ---
 
 ## 🚀 **Tech Stack**
@@ -101,7 +101,7 @@ Notifications
 Image uploads
 
 Backend
->>>>>>> dead48b24eab01890f24f3c01e872c94aa593872
+
 server/
 │── src/
 │   ├── controllers/
@@ -163,7 +163,7 @@ npm install
 npm run dev
 ```
 
-<<<<<<< HEAD
+
 Frontend `.env`:
 ```
 =======
@@ -172,7 +172,7 @@ Frontend .env:
 VITE_API_URL=http://localhost:5000/api
 ```
 
-<<<<<<< HEAD
+
 ---
 
 ## 🧭 **API Overview**
@@ -227,5 +227,5 @@ Pull requests are welcome!
 For major changes, please open an issue first to discuss what you’d like to change.
 
 📄 License
->>>>>>> dead48b24eab01890f24f3c01e872c94aa593872
+
 MIT License © 2025 DevConnect
