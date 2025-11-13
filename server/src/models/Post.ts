@@ -1,20 +1,22 @@
-import mongoose from "mongoose";
+import mongoose, { Schema, Document } from 'mongoose';
 
-const postSchema = new mongoose.Schema(
+export interface IPost extends Document {
+  user: mongoose.Types.ObjectId;
+  content: string;
+  likes: mongoose.Types.ObjectId[];
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+
+const PostSchema: Schema = new Schema(
   {
-    content: {
-      type: String,
-      required: true,
-    },
-    user: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "User",
-      required: true,
-    },
+    user: { type: Schema.Types.ObjectId, ref: 'User', required: true },
+    content: { type: String, required: true },  
+    likes: [{ type: Schema.Types.ObjectId, ref: 'User' }],
   },
-  {
-    timestamps: true,  
-  }
+  { timestamps: true }   
 );
 
-export default mongoose.model("Post", postSchema);
+export default mongoose.models.Post ||
+  mongoose.model<IPost>('Post', PostSchema);
