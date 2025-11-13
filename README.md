@@ -168,7 +168,7 @@ Frontend `.env`:
 ```
 =======
 Frontend .env:
->>>>>>> dead48b24eab01890f24f3c01e872c94aa593872
+
 VITE_API_URL=http://localhost:5000/api
 ```
 
