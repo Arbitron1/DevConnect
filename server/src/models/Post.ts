@@ -1,20 +1,26 @@
-import mongoose, { Document, Schema } from "mongoose";
+import { Schema, model, Document, Types } from 'mongoose';
 
 export interface IPost extends Document {
-  user: mongoose.Types.ObjectId;
+  author: Types.ObjectId;
   content: string;
-  image?: string; 
-  likes: mongoose.Types.ObjectId[]; 
+  images?: string[];
+  likes: Types.ObjectId[];
+  commentsCount: number;
   createdAt: Date;
   updatedAt: Date;
 }
 
-const PostSchema = new Schema<IPost>({
-  user: { type: Schema.Types.ObjectId, ref: "User", required: true },
-  content: { type: String, required: true },
-  image: { type: String },
-  likes: [{ type: Schema.Types.ObjectId, ref: "User", default: [] }],
-}, { timestamps: true });
+const postSchema = new Schema<IPost>(
+  {
+    author: { type: Schema.Types.ObjectId, ref: 'User', required: true },
+    content: { type: String, trim: true, required: true },
+    images: [{ type: String }],
+    likes: [{ type: Schema.Types.ObjectId, ref: 'User' }],
+    commentsCount: { type: Number, default: 0 },
+  },
+  { timestamps: true }
+);
 
-PostSchema.index({ user: 1, createdAt: -1 });
-export default mongoose.models.Post || mongoose.model<IPost>("Post", PostSchema);
+postSchema.index({ author: 1, createdAt: -1 });
+
+export default model<IPost>('Post', postSchema);
