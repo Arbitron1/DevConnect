@@ -43,7 +43,6 @@ router.get("/", verifyToken, async (req: any, res) => {
   }
 });
 
-
 router.post("/:id/like", verifyToken, async (req: any, res) => {
   try {
     const postId = req.params.id;
