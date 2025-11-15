@@ -2,10 +2,10 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import api from "@/lib/api"; 
+import api from "../lib/api"; 
 
 export default function Register() {
-  const router = useRouter();
+  const router = useRouter(); 
   const [formData, setFormData] = useState({
     name: "",
     email: "",

@@ -21,7 +21,7 @@ export default function Login() {
   return (
     <div className="flex justify-center items-center min-h-[80vh] bg-gray-100">
       <div className="bg-white shadow-xl rounded-2xl p-8 w-full max-w-md">
-        <h2 className="text-3xl font-bold text-center text-green-600 mb-6">
+        <h2 className="text-3xl font-bold text-center text-emerald-600 mb-6">
           Welcome Back 👋
         </h2>
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -31,7 +31,7 @@ export default function Login() {
             placeholder="Email"
             value={formData.email}
             onChange={handleChange}
-            className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+            className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-400"
           />
           <input
             type="password"
@@ -39,18 +39,18 @@ export default function Login() {
             placeholder="Password"
             value={formData.password}
             onChange={handleChange}
-            className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400"
+            className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-400"
           />
           <button
             type="submit"
-            className="w-full bg-green-500 text-white py-3 rounded-lg hover:bg-green-600 transition"
+            className="w-full bg-emerald-500 text-white py-3 rounded-lg hover:bg-blue  -600 transition"
           >
             Login
           </button>
         </form>
         <p className="text-center text-gray-600 mt-4">
-          Don’t have an account?{" "}
-          <Link href="/register" className="text-green-600 hover:underline">
+          Don't have an account?{" "}
+          <Link href="/register" className="text-teal-600 hover:underline">
             Register
           </Link>
         </p>
