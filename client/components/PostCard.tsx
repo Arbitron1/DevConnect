@@ -4,7 +4,8 @@ import LikeButton from './LikeButton';
 import CommentBox from './CommentBox';
 import CommentList from './CommentList';
 import FollowButton from './FollowButton';
-import { Link } from 'react-router-dom';
+import Link from "next/link";
+
 
 type Props = { post: Post };
 
@@ -15,13 +16,19 @@ export default function PostCard({ post }: Props) {
     <div className="border rounded-md p-4 bg-white shadow-sm">
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center space-x-3">
-          <Link to={`/profile/${post.author._id}`}>
-            <img src={post.author.avatar || '/default-avatar.png'} alt={post.author.name}
-              className="w-10 h-10 rounded-full object-cover" />
+         <Link href={`/profile/${post.author?._id || ""}`}>
+            <img
+                src={post.author?.avatar || "/default-avatar.png"}
+                alt={post.author?.name || "Unknown User"}
+                className="w-10 h-10 rounded-full object-cover"
+                />
+
+          <div>{post.author?.name || "Unknown User"}</div>
+
           </Link>
           <div>
-            <Link to={`/profile/${post.author._id}`} className="font-semibold">
-              {post.author.name}
+            <Link href={`/profile/${post.author?._id || ""}`}className="font-semibold">
+             
             </Link>
             <div className="text-xs text-gray-500">{post.author.bio}</div>
           </div>
