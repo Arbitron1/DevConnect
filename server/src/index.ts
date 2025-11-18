@@ -7,6 +7,9 @@ import authRoutes from "./routes/authRoutes";
 import profileRoutes from "./routes/profileRoutes";
 import postRoutes from "./routes/postRoutes";
 import uploadRoutes from "./routes/uploadRoutes";
+import recommendationRoutes from "./routes/recommendationRoutes";
+
+
 
 dotenv.config();
 console.log("Cloudinary ENV Loaded:", {
@@ -38,6 +41,7 @@ app.use("/api/profile", profileRoutes);
 app.use("/api/posts", postRoutes);
 app.use("/api/upload", uploadRoutes);
 
+app.use("/api/recommendations", recommendationRoutes);
 app.get("/", (req, res) => res.send("DevConnect API is running"));
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
