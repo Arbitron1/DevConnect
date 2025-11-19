@@ -22,7 +22,7 @@ Built with **MongoDB, Express, React, Node.js, and TypeScript**, DevConnect focu
 - MongoDB + Mongoose  
 - JWT Authentication  
 - Bcrypt  
-- Cloudinary (optional for images)
+- Cloudinary 
 
 ---
 
@@ -41,15 +41,8 @@ Built with **MongoDB, Express, React, Node.js, and TypeScript**, DevConnect focu
 ### 📝 **Posts System**
 - Create posts  
 - Like / Unlike  
-- (Optional) Comments  
+- Comments  
 - Explore global feed  
-
-### 🤝 **Upcoming Features**
-- Follow / Unfollow  
-- Suggested users  
-- Messaging with Socket.io  
-- Notifications  
-- Image uploads  
 
 ---
 
@@ -73,7 +66,7 @@ TypeScript
 MongoDB + Mongoose
 JWT Authentication
 Bcrypt
-Cloudinary (optional for images)
+
 
 ✨ Features
 
